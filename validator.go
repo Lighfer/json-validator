@@ -61,7 +61,6 @@ func (j *JSON) len() int {
 
 func (j *JSON) validateLen(x uint) {
 	if j.maxPosition <= j.position {
-		fmt.Println("asd")
 		panic(ErrJSON{
 			err:  ErrUnexpectedEOF,
 			part: getPartOfJSON(j),
